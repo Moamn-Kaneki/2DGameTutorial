@@ -5,6 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     Animator animator;
+    public float speed = 3f;
     // Start is called before the first frame update
     void Start()
     {  
@@ -31,6 +32,6 @@ public class Move : MonoBehaviour
         {
             transform.rotation = new Quaternion(0,0,0,0);
         }
-        transform.position += new Vector3(direction*Time.deltaTime*3, 0, 0);
+        transform.position += new Vector3(direction*Time.deltaTime*speed, 0, 0);
     }
 }
